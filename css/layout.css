@@ -1,0 +1,36 @@
+.fullbox {
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    border-width: .1px;
+    border-color: var(--lightgray);
+    border-style: solid;
+    margin: 0;
+    position: relative;
+}
+
+.contentwrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .contentwrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .contentwrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
